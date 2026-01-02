@@ -1,0 +1,88 @@
+{
+    "hana": {
+        "serverNode": "573e2afa-fd4a-472e-833d-52bb344eb3ca.hna0.prod-us10.hanacloud.ondemand.com:443",
+        "uid": "9AB8507A3A88430AB19DFEBD39578A62_9IV3F7YDSOECJ7D0TKUAF50TP_RT",
+        "schema": "9AB8507A3A88430AB19DFEBD39578A62",
+        "encrypt": true,
+        "sslValidateCertificate": false
+    },
+    "paths": {
+        "dataDir": "../data/interacciones",
+        "historialPath": "./carga-interacciones-historial.json",
+        "reportesDir": "./reportes"
+    },
+    "archivoPattern": {
+        "regex": "Interacciones_Ticket_(\\\\d+)\\\\.xlsx$",
+        "extractId": 1
+    },
+    "tablaMapping": {
+        "strategy": "range",
+        "ranges": [
+            {
+                "min": 1,
+                "max": 14,
+                "tableName": "NIUBIZ_CRM_TICKET_NB_INTERACCION_1"
+            },
+            {
+                "min": 15,
+                "max": 28,
+                "tableName": "NIUBIZ_CRM_TICKET_NB_INTERACCION_2"
+            },
+            {
+                "min": 29,
+                "max": 42,
+                "tableName": "NIUBIZ_CRM_TICKET_NB_INTERACCION_3"
+            },
+            {
+                "min": 43,
+                "max": 56,
+                "tableName": "NIUBIZ_CRM_TICKET_NB_INTERACCION_4"
+            },
+            {
+                "min": 57,
+                "max": 70,
+                "tableName": "NIUBIZ_CRM_TICKET_NB_INTERACCION_5"
+            },
+            {
+                "min": 71,
+                "max": 84,
+                "tableName": "NIUBIZ_CRM_TICKET_NB_INTERACCION_6"
+            },
+            {
+                "min": 85,
+                "max": 98,
+                "tableName": "NIUBIZ_CRM_TICKET_NB_INTERACCION_7"
+            },
+            {
+                "min": 99,
+                "max": 112,
+                "tableName": "NIUBIZ_CRM_TICKET_NB_INTERACCION_8"
+            },
+            {
+                "min": 113,
+                "max": 126,
+                "tableName": "NIUBIZ_CRM_TICKET_NB_INTERACCION_9"
+            },
+            {
+                "min": 127,
+                "max": 132,
+                "tableName": "NIUBIZ_CRM_TICKET_NB_INTERACCION_10"
+            }
+        ]
+    },
+    "columnRules": {
+        "dateTimeColumns": [
+            "CREATEDON",
+            "UPDATEDON",
+            "TEXTCREATEDON"
+        ],
+        "booleanColumns": [
+            "CHANGEDBYCUSTOMERINDICATOR"
+        ],
+        "truncationRules": {
+            "AUTHORNAME": 1000,
+            "TEXT": 2000,
+            "FORMATTEDAUTHORNAME": 1000
+        }
+    }
+}

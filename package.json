@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "@sap/hana-client": "^2.27.19",
+    "xlsx": "^0.18.5"
+  },
+  "name": "niubiz-crm-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cargar-root": "node scripts/cargar-root.js",
+    "cargar-tickets": "node scripts/cargar-tickets.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
